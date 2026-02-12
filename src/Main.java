@@ -22,7 +22,16 @@ class Student{
         return name + ", " + gpa;
     }
 
-    // constructors
+    // constructors are public methods (no return data type)
+    public Student(){ // sets a default Student
+        name = "NO NAME YET";
+        gpa = -1;
+    }
+
+    public Student(String name, double gpa){
+        this.name = name;
+        this.gpa = gpa;
+    }
 }
 
 public class Main {
@@ -31,11 +40,13 @@ public class Main {
         //Student [] array = new Student[100];
 
         s1 = new Student();
+        s2 = new Student("Anna Edwards", 4.0);
         
-        s1.setName("Aaron Singh");
-        s1.setGpa(3.68);
+        // s1.setName("Aaron Singh");
+        // s1.setGpa(3.68);
 
         System.out.println(s1.toString());
+        System.out.println(s2.toString());
 
     }
 }
